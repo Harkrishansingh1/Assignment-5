@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace Assignment_5
             ListQ = new ArrayList();
             for (int i = 0; i < LEN; i++) { ListQ.Add(r.Next(100)); }
             this.findTwoNumbersThatAddUpTo(AddUpToNumber);
+        }
+        public void findTwoNumbersThatAddUpTo(int AddUpToNumber)
+        {
+
         }
     }
 }
