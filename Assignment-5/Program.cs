@@ -11,23 +11,46 @@ namespace Assignment_5
     {
         static void Main(string[] args)
         {
-            { new GenerateList().Run(57); }
+            new GeneralList().Run(57);
         }
-    }
-    class GenerateList
-    {
-        const int LEN = 100;
-        ArrayList ListQ;
-        public void Run(int AddUpTpNumber)
-        {
-            Random r = new Random();
-            ListQ = new ArrayList();
-            for (int i = 0; i < LEN; i++) { ListQ.Add(r.Next(100)); }
-            this.findTwoNumbersThatAddUpTo(AddUpToNumber);
-        }
-        public void findTwoNumbersThatAddUpTo(int AddUpToNumber)
-        {
 
+
+        class GeneralList
+        {
+            const int LEN = 100;
+            public ArrayList ListQ;
+            int AddUpToNumber = 0;
+            public void Run(int AddUpToNumber)
+
+            {
+                Random r = new Random();
+                ListQ = new ArrayList();
+                for (int i = 0; i < LEN; i++)
+                {
+                    ListQ.Add(r.Next(100));
+                }
+                this.findTwoNumbersThatAddUpTo();
+            }
+
+            public void findTwoNumbersThatAddUpTo()
+            {
+                foreach (int num1 in ListQ)
+                {
+                    int x, y;
+                    x = num1;
+                    foreach (int num2 in ListQ)
+                    {
+                        y = num2;
+                        if (x + y == 57)
+                        {
+                            Console.WriteLine(" Numbers are: " + x + " " + y);
+                        }
+                    }
+
+
+                }
+                Console.ReadLine();
+            }
         }
     }
 }
